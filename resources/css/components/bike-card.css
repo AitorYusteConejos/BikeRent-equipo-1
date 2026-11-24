@@ -4,7 +4,7 @@
     display: flex;
     gap: 12px;
     padding: 12px;
-    border: 1px solid #333;
+    border: 2px solid black;
     border-radius: 16px;
     background: #f5e7d1;
     font-family: Arial, Helvetica, sans-serif;
@@ -95,9 +95,18 @@
     text-decoration: none;
     font: inherit;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
+.bike-card__button:hover{
+    transform: scale(1.1);
+}
+    
 .bike-card__button--disabled{
     background-color: #89847a;
     cursor: not-allowed;
+}
+
+.bike-card__button--disabled:hover{
+    transform: none;
 }
