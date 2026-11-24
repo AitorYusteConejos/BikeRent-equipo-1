@@ -2,8 +2,7 @@
 
 <article class='bike-card'>
     <div class='bike-card__image'>
-        {{--aqui va la imagen de la bicicleta--}}
-        <span>Imagen de la bicicleta</span>
+        <img src="{{ asset('images/bicicleta.png') }}" alt="Bicicleta" class="bike-card__img">
     </div>
 
     <div class="bike-card__content">
