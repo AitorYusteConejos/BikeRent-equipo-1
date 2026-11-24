@@ -1,0 +1,84 @@
+.auth {
+    margin: 0;
+    padding: 40px 16px;
+    background: #cce0cb;
+    font-family: 'Figtree', sans-serif;
+    color: #222;
+}
+
+.auth-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f5e7d1;
+    border: 1px solid #333;
+    border-radius: 16px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #8a8275;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: 2px solid #6cc669;
+    border-color: #6cc669;
+}
+
+.is-invalid {
+    border-color: #f21010;
+}
+
+.field-error,
+.form-error {
+    margin: 6px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    color: #f21010;
+}
+
+.form-check {
+    margin-bottom: 18px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    color: #222;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background: #6cc669;
+    border: 1px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #a9e38c;
+}
+

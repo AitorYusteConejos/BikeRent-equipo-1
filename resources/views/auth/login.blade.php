@@ -6,40 +6,40 @@
         @csrf
 
         <!-- Email Address -->
-        <div>
+        <div class="form-group">
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="" />
+            <x-text-input id="email" class="form-input" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="form-error" />
         </div>
 
         <!-- Password -->
-        <div class="">
+        <div class="form-group">
             <x-input-label for="password" :value="__('Password')" />
 
-            <x-text-input id="password" class=""
+            <x-text-input id="password" class="form-input"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
 
-            <x-input-error :messages="$errors->get('password')" class="" />
+            <x-input-error :messages="$errors->get('password')" class="form-error" />
         </div>
 
         <!-- Remember Me -->
-        <div class="">
-            <label for="remember_me" class="">
-                <input id="remember_me" type="checkbox" class="" name="remember">
-                <span class="">{{ __('Remember me') }}</span>
+        <div class="form-check">
+            <label for="remember_me">
+                <input id="remember_me" type="checkbox" name="remember">
+                <span>{{ __('Remember me') }}</span>
             </label>
         </div>
 
-        <div class="">
+        <div class="form-actions">
             @if (Route::has('password.request'))
-                <a class="" href="{{ route('password.request') }}">
+                <a class="link" href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
 
-            <x-primary-button class="">
+            <x-primary-button class="btn">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
