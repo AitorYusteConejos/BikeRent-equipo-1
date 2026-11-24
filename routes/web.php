@@ -6,7 +6,7 @@ use App\Http\Controllers\BikeController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 /*No sabemos todavía lo que responderá la ruta /dashboard, por lo que la comentamos de momento
 Route::get('/dashboard', [BikeController::class, '])
     ->middleware(['auth', 'verified'])
