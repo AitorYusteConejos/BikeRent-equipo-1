@@ -150,8 +150,8 @@ header {
     color: var(--color-primary-hover);
 }
 
-[x-cloak] {
-    display: none !important;
+.user-dropdown[hidden] {
+    display: none;
 }
 
 /* Adaptación móvil */
