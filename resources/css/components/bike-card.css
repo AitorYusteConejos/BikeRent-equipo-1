@@ -7,6 +7,7 @@
     border: 1px solid #333;
     border-radius: 16px;
     background: #f5e7d1;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .bike-card__image{
@@ -37,21 +38,29 @@
 
 .bike-card__label{
     display: block;
-    font-size: 12px;
+    font-size: 22px;
+    font-weight: bold;
     color: var(--card-text);
 }
 
 .bike-card__model{
     margin: 0px;
     font-size: 15px;
+    font-weight: lighter;
 }
 
 .bike-card__status{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 4px 7px;
     border-radius: 12px;
-    font-size: 11px;
-    color: #1f2937;
+    height: 30px;
+    width: 60%;
+    color: white;
+    text-align: center;
+    font-size: inherit;
+    margin-top: 10px;
 }
 
 .bike-card__status--available{
