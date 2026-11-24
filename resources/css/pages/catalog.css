@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+}
+.catalog__grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    padding: 25px;
+    background-color: var(--backgound-color);
+}
+
+@media (min-width: 900px) {
+    .catalog__grid{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px){
+    .catalog__grid{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
