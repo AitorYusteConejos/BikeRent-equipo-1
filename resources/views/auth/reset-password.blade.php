@@ -8,14 +8,14 @@
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="" />
+            <x-text-input id="email" class="" type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="" />
         </div>
 
         <!-- Password -->
         <div class="">
             <x-input-label for="password" :value="__('Password')" />
-            <x-text-input id="password" class="" />
+            <x-text-input id="password" class="" type="password" name="password" required autocomplete="new-password" />
             <x-input-error :messages="$errors->get('password')" class="" />
         </div>
 
