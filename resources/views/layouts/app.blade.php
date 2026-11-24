@@ -16,20 +16,11 @@
     </head>
     <body class="">
         <div class="">
-            @include('layouts.navigation')
-
-            <!-- Page Heading -->
-            @isset($header)
-                <header class="">
-                    <div class="">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endisset
+            <x-header />
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                @yield('content')
             </main>
         </div>
     </body>
