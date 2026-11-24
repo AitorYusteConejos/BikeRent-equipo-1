@@ -1,18 +1,18 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form id="register-form" method="POST" action="{{ route('register') }}">
         @csrf
 
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" name="name" />
+            <x-text-input id="name" class="" type="text" name="name" :value="old('name')" required maxlength="255" autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="" />
         </div>
 
         <!-- Email Address -->
         <div class="">
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" name="email" />
+            <x-text-input id="email" class="" type="email" name="email" :value="old('email')" required maxlength="255" autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="" />
         </div>
 
@@ -23,7 +23,7 @@
             <x-text-input id="password" class=""
                             type="password"
                             name="password"
-                            required autocomplete="new-password" />
+                            required minlength="8" autocomplete="new-password" />
 
             <x-input-error :messages="$errors->get('password')" class="" />
         </div>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="">
-            <a class="">
+            <a class="" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
 
