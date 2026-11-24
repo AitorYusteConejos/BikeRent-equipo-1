@@ -7,19 +7,11 @@
 
     <a href="{{ url('/') }}">Inicio</a>
 
-    <div class="">
-        <div class="">
-            <div class="">
-                <div class="">
-                    @foreach ($bikes as $bike)
-                        <div class="">
-                            <h3 class="">{{ $bike->model }}</h3>
-                            <p>Precio por hora: ${{ $bike->price_per_hour }}</p>
-                            <a href="{{ route('bikes.show', $bike) }}" class="">Ver Detalles</a>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
+    <div class="catalog__grid">
+        @forelse ($bikes as $bike)
+            <x-bike-card :bike="$bike" />
+        @empty
+            <p>No hay bicicletas disponibles.</p>
+        @endforelse
     </div>
 </x-app-layout>
