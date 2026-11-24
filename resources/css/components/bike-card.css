@@ -27,15 +27,18 @@
 .bike-card__content{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
     flex: 1;
     min-width: 0px;
     gap: 10px;
+    color: var(--card-text);
 }
 
 .bike-card__label{
     display: block;
     font-size: 12px;
-    color: #817b70;
+    color: var(--card-text);
 }
 
 .bike-card__model{
@@ -52,15 +55,15 @@
 }
 
 .bike-card__status--available{
-    background: #d1fae5;
+    background: var(--disponible);
 }
 
-.bike-card__status--unavailable{
-    background: #fee2e2;
+.bike-card__status--retired{
+    background: var(--no-disponible);
 }
 
 .bike-card__status--maintenance{
-    background: #fef3c7;
+    background: var(--mantenimiento);
 }
 
 .bike-card__status--pending{
@@ -68,17 +71,24 @@
 }
 
 .bike-card__price{
+    color: var(--card-text);
     font-size: 14px;
 }
 
 .bike-card__button{
-    display: block;
-    margin-top: auto;
-    padding: 7px 10px;
+    display: inline-block;
+    padding: 8px 18px;
+    border: 0;
     border-radius: 20px;
-    background: #f5e7d1;
-    color: #1f2937;
+    background-color: var(--alquiler);
+    color: white;
     text-align: center;
     text-decoration: none;
-    font-size: 12px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.bike-card__button--disabled{
+    background-color: #89847a;
+    cursor: not-allowed;
 }

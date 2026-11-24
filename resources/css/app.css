@@ -1,3 +1,4 @@
 @import './components/bike-card.css';
 @import './pages/catalog.css';
-@import './components/header.css'
+@import './components/header.css';
+@import './base/variables.css';
