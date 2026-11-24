@@ -16,12 +16,12 @@
 
             @if (auth()->check() && ($bike->has_pending_booking ?? false))
                 <span class="bike-card__status bike-card__status--pending">Pendiente</span>
-            @elif ($bike->status === 'available')
+            @elseif ($bike->status === 'available')
                 <span class="bike-card__status bike-card__status--available">Disponible</span>
-            @elif ($bike->status === 'maintenance')
+            @elseif ($bike->status === 'maintenance')
                 <span class="bike-card__status bike-card__status--maintenance">Mantenimiento</span>
             @else
-                <span class="bike-card__status bike-card__status--unavailable">No disponible</span>
+                <span class="bike-card__status bike-card__status--retired">No disponible</span>
             @endif
         </div>
 
