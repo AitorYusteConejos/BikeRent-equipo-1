@@ -1,5 +1,5 @@
 :root{
-    --backgound-color: #F5E8D2;
+    --background: #cce0cb;
     --card-text: #8A8275;
     --disponible: #A9E38C;
     --no-disponible: #F21010;
@@ -7,4 +7,11 @@
     --alquiler: #3ACAE3;
     --primary: #CCE0CB;
     --secondary: #6CC669;
+    --color-primary: #16a34a;
+    --color-primary-hover: #15803d;
+    --color-primary-soft: #f0fdf4;
+    --color-text-dark: #14261c;
+    --color-text-muted: #374151;
+    --color-border: #dcfce7;
+    --color-bg: #f5e8d2;
 }
