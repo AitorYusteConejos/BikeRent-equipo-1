@@ -1,0 +1,63 @@
+.theme-toggle {
+    padding: 8px 12px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+body.dark {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark header,
+body.dark .user-dropdown,
+body.dark .hero,
+body.dark .feature-card,
+body.dark .bike-card,
+body.dark .auth-card {
+    background: #2a2a2a;
+    border: none;
+}
+
+body.dark .catalog__grid,
+body.dark .auth {
+    background: #1e1e1e;
+}
+
+body.dark .theme-toggle,
+body.dark .user-trigger,
+body.dark .btn-secondary {
+    background: #333;
+    border: none;
+}
+
+body.dark .form-input {
+    background: #333;
+}
+
+body.dark header a,
+body.dark .theme-toggle,
+body.dark .user-trigger,
+body.dark .user-dropdown a,
+body.dark .user-dropdown button,
+body.dark .hero h1,
+body.dark .hero p,
+body.dark .btn-secondary,
+body.dark .feature-card h3,
+body.dark .feature-card p,
+body.dark .bike-card__content,
+body.dark .bike-card__label,
+body.dark .bike-card__price,
+body.dark .form-input,
+body.dark .link,
+body.dark .auth {
+    color: white;
+}
+
+body.dark .user-trigger:hover,
+body.dark .user-dropdown a:hover,
+body.dark .user-dropdown button:hover {
+    background: #444;
+}

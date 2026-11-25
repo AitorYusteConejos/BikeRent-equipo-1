@@ -1,12 +1,28 @@
-import { setupFormValidation } from './form-validation.js';
-import { email, required } from './validators.js';
-
 export function initLoginForm() {
-    const form = document.getElementById('login-form');
+    let form = document.getElementById('login-form');
     if (!form) return;
 
-    setupFormValidation(form, {
-        email: [required('Escribe tu email.'), email()],
-        password: [required('Escribe tu contraseña.')],
+    let email = document.getElementById('email');
+    let password = document.getElementById('password');
+    let error = document.getElementById('login-error');
+    let enviado = false;
+
+    function validar() {
+        let mensaje = '';
+
+        if (!email.value.includes('@')) mensaje = 'Escribe un email válido.';
+        else if (password.value == '') mensaje = 'Escribe tu contraseña.';
+
+        error.textContent = mensaje;
+        return mensaje == '';
+    }
+
+    form.addEventListener('submit', function (e) {
+        enviado = true;
+        if (!validar()) e.preventDefault();
+    });
+
+    form.addEventListener('input', function () {
+        if (enviado) validar();
     });
 }

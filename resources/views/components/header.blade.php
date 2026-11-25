@@ -14,6 +14,7 @@
 
         <!-- Settings Dropdown / Auth Links -->
         <div class="auth-links">
+            <button type="button" id="theme-toggle" class="theme-toggle">Cambiar tema</button>
             @auth
                 <div class="user-menu" id="user-menu">
                     <button type="button" class="user-trigger" id="user-trigger" aria-expanded="false" aria-controls="user-dropdown">

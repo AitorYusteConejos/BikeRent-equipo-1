@@ -1,24 +1,32 @@
-import { setupFormValidation } from './form-validation.js';
-import { email, maxLength, minLength, required, sameAs } from './validators.js';
-
 export function initRegisterForm() {
-    const form = document.getElementById('register-form');
+    let form = document.getElementById('register-form');
     if (!form) return;
 
-    setupFormValidation(
-        form,
-        {
-            name: [required('Escribe tu nombre.'), maxLength(255)],
-            email: [required('Escribe tu email.'), email(), maxLength(255)],
-            password: [
-                required('Escribe una contraseña.'),
-                minLength(8, 'La contraseña debe tener al menos 8 caracteres.'),
-            ],
-            password_confirmation: [
-                required('Repite la contraseña.'),
-                sameAs('password', 'Las contraseñas no coinciden.'),
-            ],
-        },
-        { password: ['password_confirmation'] },
-    );
+    let nombre = document.getElementById('name');
+    let email = document.getElementById('email');
+    let password = document.getElementById('password');
+    let repetir = document.getElementById('password_confirmation');
+    let error = document.getElementById('register-error');
+    let enviado = false;
+
+    function validar() {
+        let mensaje = '';
+
+        if (nombre.value == '') mensaje = 'Escribe tu nombre.';
+        else if (!email.value.includes('@')) mensaje = 'Escribe un email válido.';
+        else if (password.value.length < 8) mensaje = 'La contraseña debe tener al menos 8 caracteres.';
+        else if (repetir.value != password.value) mensaje = 'Las contraseñas no coinciden.';
+
+        error.textContent = mensaje;
+        return mensaje == '';
+    }
+
+    form.addEventListener('submit', function (e) {
+        enviado = true;
+        if (!validar()) e.preventDefault();
+    });
+
+    form.addEventListener('input', function () {
+        if (enviado) validar();
+    });
 }

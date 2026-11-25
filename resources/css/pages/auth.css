@@ -1,6 +1,7 @@
 .auth {
     margin: 0;
     padding: 40px 16px;
+    min-height: 100vh;
     background: #cce0cb;
     font-family: 'Figtree', sans-serif;
     color: #222;

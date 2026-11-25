@@ -1,47 +1,45 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="" :status="session('status')" />
+@extends('layouts.app')
 
-    <form id="login-form" method="POST" action="{{ route('login') }}">
-        @csrf
+@section('content')
+<div class="auth">
+    <div class="auth-card">
+        @if (session('status'))
+            <p>{{ session('status') }}</p>
+        @endif
 
-        <!-- Email Address -->
-        <div class="form-group">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="form-input" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="form-error" />
-        </div>
+        <form id="login-form" method="POST" action="{{ route('login') }}" novalidate>
+            @csrf
 
-        <!-- Password -->
-        <div class="form-group">
-            <x-input-label for="password" :value="__('Password')" />
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" class="form-input" type="email" name="email" value="{{ old('email') }}" autofocus>
+                @error('email')
+                    <p class="form-error">{{ $message }}</p>
+                @enderror
+            </div>
 
-            <x-text-input id="password" class="form-input"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+            <div class="form-group">n  
+                <label for="password">Contraseña</label>
+                <input id="password" class="form-input" type="password" name="password">
+                @error('password')
+                    <p class="form-error">{{ $message }}</p>
+                @enderror
+            </div>
 
-            <x-input-error :messages="$errors->get('password')" class="form-error" />
-        </div>
+            <div class="form-check">
+                <label for="remember_me">
+                    <input id="remember_me" type="checkbox" name="remember">
+                    Recordarme
+                </label>
+            </div>
 
-        <!-- Remember Me -->
-        <div class="form-check">
-            <label for="remember_me">
-                <input id="remember_me" type="checkbox" name="remember">
-                <span>{{ __('Remember me') }}</span>
-            </label>
-        </div>
+            <p id="login-error" class="field-error"></p>
 
-        <div class="form-actions">
-            @if (Route::has('password.request'))
-                <a class="link" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="btn">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+            <div class="form-actions">
+                <a class="link" href="{{ route('password.request') }}">¿Olvidaste tu contraseña?</a>
+                <button type="submit" class="btn">Entrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+@endsection
