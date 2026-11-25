@@ -1,12 +1,13 @@
 *{
     margin: 0px;
+   
 }
 .catalog__grid{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
     padding: 25px;
-    background-color: var(--backgound-color);
+    background-color: var(--background);
 }
 
 @media (min-width: 1090px) {
