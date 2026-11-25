@@ -20,3 +20,7 @@
     --detail-muted: #526078;
     --detail-border: #e2e8f0;
 }
+
+body {
+    font-family: 'Figtree', sans-serif;
+}
