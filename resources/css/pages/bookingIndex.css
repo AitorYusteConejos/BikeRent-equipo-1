@@ -1,0 +1,121 @@
+body {
+    background-color: var(--background);
+    color: var(--color-text-dark);
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+}
+
+.bookings-container {
+    max-width: 768px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.bookings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.bookings-header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.bookings-back-link {
+    font-size: 0.875rem;
+    color: var(--color-text-dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.bookings-back-link:hover {
+    text-decoration: underline;
+}
+
+.bookings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.booking-card {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+}
+
+@media (min-width: 640px) {
+    .booking-card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.booking-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+}
+
+.booking-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.booking-user {
+    font-size: 0.875rem;
+    color: var(--card-text);
+    margin: 0;
+}
+
+.booking-user span {
+    color: var(--color-text-dark);
+    font-weight: 500;
+}
+
+.booking-bike {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.booking-btn {
+    display: inline-block;
+    background-color: var(--color-primary-soft);
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.booking-btn:hover {
+    background-color: var(--color-border);
+    color: var(--color-primary-hover);
+}
+
+.bookings-empty-state {
+    text-align: center;
+    padding: 48px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 2px dashed var(--color-border);
+}
+
+.bookings-empty-state p {
+    color: var(--card-text);
+    margin: 0;
+}
