@@ -1,0 +1,106 @@
+.detail-body{
+    
+    gap: 25px;
+    padding: 25px;
+    background-color: var(--background);
+}
+
+.bike-detail {
+    box-sizing: border-box;
+    width: min(720px, calc(100% - 2rem));
+    margin: clamp(1.5rem, 5vw, 3rem) auto;
+    padding: clamp(1rem, 4vw, 2rem);
+    border: 2px solid var(--card-text);
+    border-radius: 16px;
+    background-color: #f5e7d1;
+    color: var(--card-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.bike-detail__back {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+.bike-detail__title {
+    margin: 1.25rem 0;
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+
+.bike-detail__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.bike-detail__table caption {
+    padding-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+.bike-detail__table th,
+.bike-detail__table td {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgb(0 0 0 / 15%);
+    text-align: left;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+
+
+.bike-detail__table th {
+    width: 45%;
+    padding-right: 0.75rem;
+    font-weight: bold;
+}
+
+
+.bike-detail .bike-card__status {
+    box-sizing: border-box;
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    height: auto;
+    min-height: 30px;
+    margin: 0;
+}
+
+
+.bike-detail__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+
+.bike-detail__booking {
+    box-sizing: border-box;
+}
+
+
+.bike-detail a:focus-visible {
+    outline: 2px solid var(--card-text);
+    outline-offset: 4px;
+}
+
+
+@media (max-width: 480px) {
+    .bike-detail__booking {
+        width: 100%;
+    }
+
+
+    .bike-detail .bike-detail__booking:hover {
+        transform: none;
+    }
+}

@@ -14,4 +14,9 @@
     --color-text-muted: #374151;
     --color-border: #dcfce7;
     --color-bg: #f5e8d2;
+    --detail-accent: #1d4ed8;
+    --detail-accent-hover: #1e40af;
+    --detail-text: #172033;
+    --detail-muted: #526078;
+    --detail-border: #e2e8f0;
 }
