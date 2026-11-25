@@ -8,7 +8,13 @@
 
 body.dark {
     background: #1e1e1e;
-    color: #f5e8d2;
+    color: var(--color-primary-soft);
+    --background: #1e1e1e;
+    --color-bg: #2a2a2a;
+    --color-text-dark: var(--color-primary-soft);
+    --color-text-muted: var(--color-primary-soft);
+    --color-border: #f5e8d2;
+    --primary: #333;
 }
 
 body.dark header,
@@ -17,56 +23,78 @@ body.dark .hero,
 body.dark .feature-card,
 body.dark .bike-card,
 body.dark .auth-card,
-body.dark .booking-detail__card {
+body.dark .booking-detail__card,
+body.dark .booking-page > p,
+body.dark #booking-form,
+body.dark .bookings-filter-form,
+body.dark .booking-card,
+body.dark .profile__section,
+body.dark .profile-modal {
     background: #2a2a2a;
-    border-color: var(--color-bg);
+    border-color: #f5e8d2;
 }
 
 body.dark .catalog__grid,
-body.dark .auth {
+body.dark .auth,
+body.dark .booking-page {
     background: #1e1e1e;
 }
 
 body.dark .theme-toggle,
 body.dark .user-trigger,
-body.dark .btn-secondary {
+body.dark .btn-secondary,
+body.dark .booking-page > a,
+body.dark .booking-btn {
     background: #333;
-    border-color: var(--color-bg);
+    border-color: #f5e8d2;
 }
 
-body.dark .form-input {
+body.dark .form-input,
+body.dark #booking-form input,
+body.dark #booking-form > p,
+body.dark .filter-input,
+body.dark .filter-select,
+body.dark .profile-modal input {
     background: #333;
 }
 
+body.dark h1,
+body.dark h2,
+body.dark h3,
 body.dark header a,
 body.dark .theme-toggle,
 body.dark .user-trigger,
 body.dark .user-dropdown a,
 body.dark .user-dropdown button,
-body.dark .hero h1,
 body.dark .hero p,
 body.dark .btn-secondary,
-body.dark .feature-card h3,
 body.dark .feature-card p,
 body.dark .bike-card__content,
 body.dark .bike-card__label,
 body.dark .bike-card__price,
+body.dark .bike-card__status--available,
+body.dark .bike-card__status--retired,
 body.dark .form-input,
 body.dark .link,
 body.dark .auth,
-body.dark .booking-detail__back {
-    color:  #f5e8d2;
+body.dark .booking-detail__back,
+body.dark .bookings-back-link,
+body.dark #cost-estimate,
+body.dark .profile,
+body.dark .profile__back,
+body.dark .profile-modal,
+body.dark .profile-modal input {
+    color: var(--color-primary-soft);
 }
 
 body.dark .user-trigger:hover,
 body.dark .user-dropdown a:hover,
-body.dark .user-dropdown button:hover {
+body.dark .user-dropdown button:hover,
+body.dark .booking-page > a:hover,
+body.dark .booking-btn:hover {
     background: #444;
 }
 
-body.dark .bike-card__status--available,
-body.dark .bike-card__status--retired,
-body.dark .bookings-header h1,
-body.dark .bookings-back-link {
-    color: var(--color-bg);
+body.dark .profile__section--danger {
+    border-color: var(--no-disponible);
 }

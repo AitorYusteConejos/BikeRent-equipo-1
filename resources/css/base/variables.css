@@ -15,3 +15,7 @@
     --color-border: #dcfce7;
     --color-bg: #f5e8d2;
 }
+
+body {
+    font-family: 'Figtree', sans-serif;
+}
