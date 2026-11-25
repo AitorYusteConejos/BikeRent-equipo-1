@@ -6,7 +6,6 @@
     cursor: pointer;
 }
 
-/* Modo oscuro */
 body.dark {
     background: #1e1e1e;
     color: white;
@@ -19,7 +18,7 @@ body.dark .feature-card,
 body.dark .bike-card,
 body.dark .auth-card {
     background: #2a2a2a;
-    border-color: black;
+    border-color: var(--color-bg);
 }
 
 body.dark .catalog__grid,
@@ -31,7 +30,7 @@ body.dark .theme-toggle,
 body.dark .user-trigger,
 body.dark .btn-secondary {
     background: #333;
-    border-color: black;
+    border-color: var(--color-bg);
 }
 
 body.dark .form-input {
@@ -61,4 +60,9 @@ body.dark .user-trigger:hover,
 body.dark .user-dropdown a:hover,
 body.dark .user-dropdown button:hover {
     background: #444;
+}
+
+body.dark .bike-card__status--available,
+body.dark .bike-card__status--retired {
+    color: var(--color-bg);
 }
