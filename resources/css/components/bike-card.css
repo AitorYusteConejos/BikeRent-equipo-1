@@ -4,7 +4,7 @@
     display: flex;
     gap: 12px;
     padding: 12px;
-    border: 2px solid black;
+    border: 2px solid var(--card-text);
     border-radius: 16px;
     background: #f5e7d1;
     font-family: Arial, Helvetica, sans-serif;
@@ -57,22 +57,23 @@
     border-radius: 12px;
     height: 30px;
     width: 60%;
-    color: white;
+    border: 2px solid var(--card-text);
+    color: var(--card-text);
     text-align: center;
     font-size: inherit;
     margin-top: 10px;
 }
 
 .bike-card__status--available{
-    background: var(--disponible);
+    border-color: var(--disponible);
 }
 
 .bike-card__status--retired{
-    background: var(--no-disponible);
+    border-color: var(--no-disponible);
 }
 
 .bike-card__status--maintenance{
-    background: var(--mantenimiento);
+    border-color: var(--mantenimiento);
 }
 
 .bike-card__status--pending{

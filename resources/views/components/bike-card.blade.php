@@ -32,14 +32,9 @@
             </span>
         </div>
 
-        @if ($bike->status === 'available')
-            <a class="bike-card__button" href="{{ route('booking.create', $bike) }}">
-                Alquilar
+
+            <a class="bike-card__button" href="{{ route('bikes.show', $bike) }}">
+                Ver en detalle
             </a>
-        @else
-            <button class="bike-card__button bike-card__button--disabled" type="button" disabled>
-                Alquilar
-            </button>
-        @endif
     </div>
 </article>
