@@ -18,7 +18,7 @@
                 @enderror
             </div>
 
-            <div class="form-group">n  
+            <div class="form-group">
                 <label for="password">Contraseña</label>
                 <input id="password" class="form-input" type="password" name="password">
                 @error('password')
@@ -43,3 +43,4 @@
     </div>
 </div>
 @endsection
+
