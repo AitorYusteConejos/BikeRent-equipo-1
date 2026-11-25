@@ -22,7 +22,7 @@
                     <option value="completed">Confirmada</option>
                     <option value="pending">Pendiente</option>
                     <option value="active">Activa</option>
-                    <option value="canceled">Cancelada</option>
+                    <option value="cancelled">Cancelada</option>
                 </select>
             </div>
 
