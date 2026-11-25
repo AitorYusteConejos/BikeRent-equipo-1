@@ -1,0 +1,173 @@
+.booking-page {
+    min-height: calc(100vh - 73px);
+    padding: 3rem 1.5rem;
+    background-color: #cce0cb;
+    font-family: 'Figtree', sans-serif;
+    color: var(--color-text-dark, #14261c);
+}
+
+.booking-page > h1,
+.booking-page > a,
+.booking-page > p,
+.booking-page > div,
+.booking-page > #booking-form {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Enlace de volver con estética de botón secundario */
+.booking-page > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+    padding: 0.45rem 0.9rem;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-dark, #14261c);
+    text-decoration: none;
+}
+
+.booking-page > a::before {
+    font-weight: 700;
+}
+
+.booking-page > a:hover,
+.booking-page > a:focus-visible {
+    background-color: var(--color-primary-soft, #f0fdf4);
+    border-color: var(--color-primary, #16a34a);
+    color: var(--color-primary-hover, #15803d);
+}
+
+/* Título principal */
+.booking-page > h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-dark, #14261c);
+}
+
+/* Resumen de bicicleta y precio */
+.booking-page > p {
+    padding: 0.85rem 1rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--color-bg, #f5e8d2);
+    border: 1px solid #e5d5b7;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-text-dark, #14261c);
+}
+
+/* Bloque de errores de validación */
+.booking-page > div:has(ul) {
+    padding: 0.85rem 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #fef2f2;
+    border: 1px solid #ef4444;
+    border-radius: 8px;
+}
+
+.booking-page > div:has(ul) ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+    color: #dc2626;
+}
+
+/* Tarjeta del formulario */
+#booking-form {
+    padding: 2rem;
+    background-color: var(--color-bg, #f5e8d2);
+    border: 1px solid #e5d5b7;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(22, 163, 74, 0.08);
+}
+
+#booking-form > div {
+    margin-bottom: 1.25rem;
+}
+
+#booking-form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-dark, #14261c);
+}
+
+#booking-form input[type="datetime-local"] {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--color-text-dark, #14261c);
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#booking-form input[type="datetime-local"]:focus {
+    outline: none;
+    border-color: var(--color-primary, #16a34a);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+}
+
+/* Caja de coste estimado */
+#booking-form > p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    margin: 1.5rem 0;
+    background-color: var(--color-primary-soft, #f0fdf4);
+    border: 1px solid var(--color-border, #dcfce7);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+#cost-estimate {
+    font-weight: 700;
+    color: var(--color-primary-hover, #15803d);
+}
+
+/* Botón de envío */
+#booking-form button[type="submit"] {
+    width: 100%;
+    padding: 0.7rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: #ffffff;
+    background-color: var(--color-primary, #16a34a);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#booking-form button[type="submit"]:hover,
+#booking-form button[type="submit"]:focus-visible {
+    background-color: var(--color-primary-hover, #15803d);
+}
+
+@media (max-width: 600px) {
+    .booking-page {
+        padding: 2rem 1rem;
+    }
+
+    #booking-form {
+        padding: 1.5rem;
+    }
+
+    #booking-form > p {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

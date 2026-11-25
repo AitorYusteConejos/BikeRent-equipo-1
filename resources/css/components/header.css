@@ -21,6 +21,7 @@ header {
     position: sticky;
     top: 0;
     gap: 2rem;
+    z-index: 1000;
 }
 
 /* Logo */
