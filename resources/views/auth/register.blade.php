@@ -1,52 +1,47 @@
-<x-guest-layout>
-    <form id="register-form" method="POST" action="{{ route('register') }}">
-        @csrf
+@extends('layouts.app')
 
-        <!-- Name -->
-        <div class="form-group">
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="form-input" type="text" name="name" :value="old('name')" required maxlength="255" autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="form-error" />
-        </div>
+@section('content')
+<div class="auth">
+    <div class="auth-card">
+        <form id="register-form" method="POST" action="{{ route('register') }}" novalidate>
+            @csrf
 
-        <!-- Email Address -->
-        <div class="form-group">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="form-input" type="email" name="email" :value="old('email')" required maxlength="255" autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="form-error" />
-        </div>
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input id="name" class="form-input" type="text" name="name" value="{{ old('name') }}" autofocus>
+                @error('name')
+                    <p class="form-error">{{ $message }}</p>
+                @enderror
+            </div>
 
-        <!-- Password -->
-        <div class="form-group">
-            <x-input-label for="password" :value="__('Password')" />
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" class="form-input" type="email" name="email" value="{{ old('email') }}">
+                @error('email')
+                    <p class="form-error">{{ $message }}</p>
+                @enderror
+            </div>
 
-            <x-text-input id="password" class="form-input"
-                            type="password"
-                            name="password"
-                            required minlength="8" autocomplete="new-password" />
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input id="password" class="form-input" type="password" name="password">
+                @error('password')
+                    <p class="form-error">{{ $message }}</p>
+                @enderror
+            </div>
 
-            <x-input-error :messages="$errors->get('password')" class="form-error" />
-        </div>
+            <div class="form-group">
+                <label for="password_confirmation">Repetir contraseña</label>
+                <input id="password_confirmation" class="form-input" type="password" name="password_confirmation">
+            </div>
 
-        <!-- Confirm Password -->
-        <div class="form-group">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+            <p id="register-error" class="field-error"></p>
 
-            <x-text-input id="password_confirmation" class="form-input"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="form-error" />
-        </div>
-
-        <div class="form-actions">
-            <a class="link" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="btn">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+            <div class="form-actions">
+                <a class="link" href="{{ route('login') }}">¿Ya tienes cuenta?</a>
+                <button type="submit" class="btn">Registrarse</button>
+            </div>
+        </form>
+    </div>
+</div>
+@endsection
