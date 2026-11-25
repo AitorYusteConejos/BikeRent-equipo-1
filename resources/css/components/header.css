@@ -1,15 +1,5 @@
 /* public/css/header.css */
 
-:root {
-    --color-primary: #16a34a;
-    --color-primary-hover: #15803d;
-    --color-primary-soft: #f0fdf4;
-    --color-text-dark: #14261c;
-    --color-text-muted: #374151;
-    --color-border: #dcfce7;
-    --color-bg: #f5e8d2;
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -21,6 +11,7 @@ header {
     position: sticky;
     top: 0;
     gap: 2rem;
+    z-index: 1000;
 }
 
 /* Logo */
