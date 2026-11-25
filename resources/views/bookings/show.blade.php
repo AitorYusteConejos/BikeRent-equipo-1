@@ -1,24 +1,39 @@
-<x-app-layout>
-    <h1>Detalles de la Reserva</h1>
+@extends('layouts.app')
 
+@section('content')
+<div class="booking-detail">
+    <div class="booking-detail__header">
+        <h1>Detalles de la reserva</h1>
+        <a href="{{ route('booking.index') }}" class="booking-detail__back">Volver a mis reservas</a>
+    </div>
 
-    <a href="{{ route('booking.index') }}">Volver al listado</a>
+    <div class="booking-detail__card">
+        <p><strong>Bicicleta:</strong> {{ $booking->bike->model }}</p>
+        <p><strong>Usuario:</strong> {{ $booking->user->name }}</p>
+        <p><strong>Fecha de inicio:</strong> {{ $booking->start_date->format('d/m/Y H:i') }}</p>
+        <p><strong>Fecha de fin:</strong> {{ $booking->end_date->format('d/m/Y H:i') }}</p>
+        <p><strong>Precio total:</strong> {{ number_format($booking->total_cost, 2, ',', '.') }} €</p>
 
-    <div>
-        <p>Usuario: {{ $booking->user->name }}</p>
-        <p>Bicicleta: {{ $booking->bike->model }}</p>
-        <p>Fecha de Inicio: {{ $booking->start_date }}</p>
-        <p>Fecha de Fin: {{ $booking->end_date }}</p>
-        <p>Precio Total: ${{ number_format($booking->total_cost, 2) }}</p>
-        <p>Estado: {{$booking->status}}</p>
+        <p>
+            <strong>Estado:</strong>
+            @if ($booking->status === 'pending')
+                <span class="booking-detail__status booking-detail__status--pending">Pendiente</span>
+            @elseif ($booking->status === 'active')
+                <span class="booking-detail__status booking-detail__status--active">Activa</span>
+            @elseif ($booking->status === 'completed')
+                <span class="booking-detail__status">Completada</span>
+            @else
+                <span class="booking-detail__status booking-detail__status--cancelled">Cancelada</span>
+            @endif
+        </p>
+
         @if ($booking->status === 'pending')
             <form action="{{ route('booking.cancel', $booking) }}" method="POST">
                 @csrf
                 @method('PATCH')
-                <button type="submit" class="">
-                    Cancelar reserva
-                </button>
+                <button type="submit" class="booking-detail__cancel">Cancelar reserva</button>
             </form>
         @endif
     </div>
-</x-app-layout>
+</div>
+@endsection

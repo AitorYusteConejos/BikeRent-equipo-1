@@ -2,13 +2,13 @@
     padding: 8px 12px;
     border: 1px solid #999;
     border-radius: 6px;
-    background: white;
+    background: #f5e8d2;
     cursor: pointer;
 }
 
 body.dark {
     background: #1e1e1e;
-    color: white;
+    color: #f5e8d2;
 }
 
 body.dark header,
@@ -16,7 +16,8 @@ body.dark .user-dropdown,
 body.dark .hero,
 body.dark .feature-card,
 body.dark .bike-card,
-body.dark .auth-card {
+body.dark .auth-card,
+body.dark .booking-detail__card {
     background: #2a2a2a;
     border-color: var(--color-bg);
 }
@@ -52,8 +53,9 @@ body.dark .bike-card__label,
 body.dark .bike-card__price,
 body.dark .form-input,
 body.dark .link,
-body.dark .auth {
-    color: white;
+body.dark .auth,
+body.dark .booking-detail__back {
+    color:  #f5e8d2;
 }
 
 body.dark .user-trigger:hover,
@@ -63,6 +65,8 @@ body.dark .user-dropdown button:hover {
 }
 
 body.dark .bike-card__status--available,
-body.dark .bike-card__status--retired {
+body.dark .bike-card__status--retired,
+body.dark .bookings-header h1,
+body.dark .bookings-back-link {
     color: var(--color-bg);
 }

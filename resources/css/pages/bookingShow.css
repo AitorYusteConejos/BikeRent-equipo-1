@@ -1,0 +1,61 @@
+.booking-detail {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.booking-detail__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.booking-detail__header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.booking-detail__back {
+    font-size: 0.875rem;
+    color: var(--color-text-dark);
+}
+
+.booking-detail__card {
+    padding: 24px;
+    background: var(--color-bg);
+    border: 2px solid var(--card-text);
+    border-radius: 16px;
+}
+
+.booking-detail__card p {
+    margin: 0 0 14px;
+}
+
+.booking-detail__status {
+    padding: 4px 12px;
+    border: 2px solid var(--card-text);
+    border-radius: 12px;
+}
+
+.booking-detail__status--pending {
+    border-color: var(--mantenimiento);
+}
+
+.booking-detail__status--active {
+    border-color: var(--disponible);
+}
+
+.booking-detail__status--cancelled {
+    border-color: var(--no-disponible);
+}
+
+.booking-detail__cancel {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: var(--no-disponible);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
